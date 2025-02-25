@@ -1,14 +1,8 @@
 "use client";
 
 import React from "react";
-import {
-  Box,
-  Grid,
-  Card,
-  Typography,
-  CardActions,
-  Button,
-} from "@mui/material";
+import Image from "next/image";
+import { Box, Grid, Card, Typography, CardActions, Button } from "@mui/material";
 
 export default function HeroSection() {
   const buttonStyles = {
@@ -35,16 +29,8 @@ export default function HeroSection() {
         py: 4,
       }}
     >
-      <Grid
-        container
-        spacing={4}
-        sx={{ maxWidth: 1200, margin: "0 auto" }}
-      >
-        <Grid
-          item
-          xs={12}
-          sx={{ display: "flex", justifyContent: "center" }}
-        >
+      <Grid container spacing={4} sx={{ maxWidth: 1200, margin: "0 auto" }}>
+        <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
           <Box
             sx={{
               width: 300,
@@ -54,19 +40,19 @@ export default function HeroSection() {
               boxShadow: 3,
             }}
           >
-            <img
+            <Image
               src="/images/Ibrahim_Headshot.png"
-              width="100%"
-              height="100%"
+              alt="Ibrahim Headshot"
+              width={300}
+              height={300}
               style={{
                 objectFit: "cover",
                 transform: "scale(1.3)",
-                boxShadow: "3px"
+                boxShadow: "3px",
               }}
             />
           </Box>
         </Grid>
-
         <Grid item xs={12}>
           <Typography
             variant="h2"
@@ -74,13 +60,12 @@ export default function HeroSection() {
               textAlign: "center",
               fontWeight: "bold",
               color: "black",
-              fontFamily: "'Playfair Display', serif"
+              fontFamily: "'Playfair Display', serif",
             }}
           >
             Ibrahim Mohsin
           </Typography>
         </Grid>
-
         <Grid item xs={12}>
           <Card
             elevation={6}
@@ -121,12 +106,7 @@ export default function HeroSection() {
                 },
               }}
             >
-              <Typography
-                variant="h5"
-                color="text.primary"
-                gutterBottom
-                fontWeight="bold"
-              >
+              <Typography variant="h5" color="text.primary" gutterBottom fontWeight="bold">
                 Morehead-Cain Scholar @ UNC Chapel-Hill
               </Typography>
               <Typography variant="subtitle1" color="text.secondary" paragraph>
@@ -136,7 +116,6 @@ export default function HeroSection() {
                 Student | Full-Stack Developer | Entrepreneur
               </Typography>
             </Box>
-
             <CardActions
               sx={{
                 flexWrap: "wrap",
@@ -150,15 +129,15 @@ export default function HeroSection() {
               <Button sx={buttonStyles}>Blog</Button>
               <Button sx={buttonStyles}>Interests</Button>
               <Button sx={buttonStyles}>Contact</Button>
-              <Button 
+              <Button
                 variant="contained"
-                href="/Ibrahim_Mohsin_Resume.pdf" 
-                target="_blank"    
+                href="/Ibrahim_Mohsin_Resume.pdf"
+                target="_blank"
                 rel="noopener noreferrer"
-                sx={buttonStyles}>
-                    Resume
-                
-                </Button>
+                sx={buttonStyles}
+              >
+                Resume
+              </Button>
             </CardActions>
           </Card>
         </Grid>

@@ -47,7 +47,7 @@ export default function ContactMe() {
               mb: 5,
             }}
           >
-            Let's Get In Touch 👋
+            Let&apos;s Get In Touch 👋
           </Typography>
           <Typography variant="h6" sx={{ mb: 1 }}>
             School Email: imohsin@unc.edu
